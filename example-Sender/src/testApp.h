@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxTcpOscSender.h"
+#include "ofxTcpOsc.h"
 
 const string host = "localhost";
 const int port = 50000;
