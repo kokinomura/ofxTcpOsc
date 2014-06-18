@@ -21,7 +21,7 @@ public:
     void setup(int listen_port);
     void update(ofEventArgs & args);
     bool hasWaitingMessages();
-    bool getNextMessage(ofxTcpOscMessage &);
+    bool getNextMessage(ofxTcpOscMessage *);
 
     ofxTCPServer server;
     

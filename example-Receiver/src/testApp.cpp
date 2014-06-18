@@ -10,7 +10,7 @@ void testApp::setup(){
 void testApp::update(){
     while (receiver.hasWaitingMessages()) {
         ofxTcpOscMessage m;
-        receiver.getNextMessage(m);
+        receiver.getNextMessage(&m);
         
         cout << "message from " << m.getRemoteIp() << ", " << m.getRemotePort() << ", " << m.getAddress() << endl;
         

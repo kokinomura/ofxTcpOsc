@@ -36,10 +36,10 @@ bool ofxTcpOscReceiver::hasWaitingMessages() {
     return !_messages.empty();
 }
 
-bool ofxTcpOscReceiver::getNextMessage(ofxTcpOscMessage & m) {
+bool ofxTcpOscReceiver::getNextMessage(ofxTcpOscMessage * m) {
     ofPtr<ofxTcpOscMessage> p = _messages.front();
     _messages.pop_front();
-    m = *(p.get());
+    m->copy(*(p.get()));
     return true;
 }
 
