@@ -18,7 +18,7 @@ void testApp::update(){
             string strx = m.getArgAsString(0);
             int xpos = m.getArgAsInt32(1);
             string stry = m.getArgAsString(2);
-            int ypos = m.getArgAsInt32(3);
+            uint64_t ypos = m.getArgAsInt32(3);
             string strframerate = m.getArgAsString(4);
             float framerate = m.getArgAsFloat(5);
             
