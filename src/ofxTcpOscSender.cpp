@@ -97,7 +97,7 @@ void ofxTcpOscSender::appendStringToOscString(string input, vector<char> &output
 }
 
 void ofxTcpOscSender::makeOscString(string input, vector<char> &output) {
-    int numNulls = input.size() % 4;
+    int numNulls = 4 - input.size() % 4;
     if (numNulls == 0) {
         numNulls = 4;
     }
@@ -107,7 +107,6 @@ void ofxTcpOscSender::makeOscString(string input, vector<char> &output) {
     for (int i=0; i<numNulls; i++) {
         output.push_back(0);
     }
-    return output;
 }
 
 string ofxTcpOscSender::makeOscTypeTagString(ofxTcpOscMessage &message) {
